@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <h3>Student Data</h3>
+    <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Student Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Department</th>
+              <th scope="col">Year</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data; let i = index">
+              
+                <ng-container *ngIf="!editing[i]; else editField">
+                <td (click)="edit(i)">{{ item.Id }}</td>
+                <td (click)="edit(i)">{{ item.Name }}</td>
+                <td (click)="edit(i)">{{ item.Department }}</td>
+                <td (click)="edit(i)">{{ item.Year }}</td>
+                </ng-container>
+    
+                <ng-template #editField>    
+                <td><input type="text" [(ngModel)]="item.Id"></td>
+                <td><input type="text" [(ngModel)]="item.Name"></td>
+                <td><input type="text" [(ngModel)]="item.Department"></td>
+                <td><input type="text" [(ngModel)]="item.Year"></td>
+              </ng-template>
+              <td>
+                <button *ngIf="!editing[i]" (click)="edit(i)">Edit</button>
+                <button *ngIf="editing[i]" (click)="delete(i)">Delete</button>
+                <button *ngIf="editing[i]" (click)="save(i)">Save</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
