@@ -1,6 +1,7 @@
 
 # Angular
 Angular small task and projects
+Angular task using NgModel, Routing, Data Binding and Using Services (Data Service)
 =======
 # StudentData
 
