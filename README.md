@@ -1,12 +1,11 @@
 
 # Angular
 Angular small task and projects
-Angular task using NgModel, Routing, Data Binding and Using Services (Data Service)
 =======
 # StudentData
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
-
+Angular task using NgModel, Routing, Data Binding and Using Services (Data Service)
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
